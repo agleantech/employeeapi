@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "949d8cb9-65a8-42bf-a752-864732e1f2dd",
+		"name": "API Employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ac-api-employee.herokuapp.com/api/v1/employee/list",
+					"protocol": "https",
+					"host": [
+						"ac-api-employee",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAll Filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\": \"QA\",\r\n    \"name\": \"Jane\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ac-api-employee.herokuapp.com/api/v1/employee/list",
+					"protocol": "https",
+					"host": [
+						"ac-api-employee",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"person\": {\r\n            \"id\": 2\r\n        },\r\n        \"position\": {\r\n            \"id\": 1\r\n        },\r\n        \"salary\": 14000.00\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ac-api-employee.herokuapp.com/api/v1/employee",
+					"protocol": "https",
+					"host": [
+						"ac-api-employee",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"person\": {\r\n            \"id\": 1\r\n        },\r\n        \"position\": {\r\n            \"id\": 1\r\n        },\r\n        \"salary\": 14000.00\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ac-api-employee.herokuapp.com/api/v1/employee/1",
+					"protocol": "https",
+					"host": [
+						"ac-api-employee",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAll Positions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ac-api-employee.herokuapp.com/api/v1/position/list",
+					"protocol": "https",
+					"host": [
+						"ac-api-employee",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"position",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
